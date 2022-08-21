@@ -36,6 +36,11 @@ namespace REST_ServiceProject.Controllers
             return Ok(userRepository.Users);
         }
 
+        /// <summary>
+        /// Get specific user by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetSpecific(int id)
         {
@@ -49,6 +54,11 @@ namespace REST_ServiceProject.Controllers
             return Ok(user);
         }
 
+        /// <summary>
+        /// Post new user to list/database
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         // POST api/<UserController>
         [HttpPost]
         public IActionResult Post([FromBody] User value)
@@ -67,6 +77,12 @@ namespace REST_ServiceProject.Controllers
             return CreatedAtAction(nameof(GetSpecific),new { id = value.Id },value);
         }
 
+        /// <summary>
+        /// Put new data into existing user by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] User value)
@@ -88,6 +104,11 @@ namespace REST_ServiceProject.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Delete user for list/database by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)

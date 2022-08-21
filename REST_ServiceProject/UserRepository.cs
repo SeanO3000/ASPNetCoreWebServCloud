@@ -12,11 +12,13 @@ namespace REST_ServiceProject
         /// Enumerable list of users
         /// </summary>
         IEnumerable<User> Users { get; }
+
         /// <summary>
         /// Method to add users to enumberable list
         /// </summary>
         /// <param name="user"></param>
         void Add(User user);
+
         /// <summary>
         /// Method to Update user in enumerable list by id
         /// </summary>
@@ -24,6 +26,7 @@ namespace REST_ServiceProject
         /// <param name="user"></param>
         /// <returns></returns>
         bool Update(int userId, User user);
+
         /// <summary>
         /// Method to delete user from enumerable list
         /// </summary>
