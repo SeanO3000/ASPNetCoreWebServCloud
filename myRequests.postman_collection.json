@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "003f4aa9-aaac-4403-88b4-1110e22a163e",
+		"name": "myRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20532058"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5171/api/User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"User1\",\r\n  \"password\": \"user1Pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5171/api/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5171",
+					"path": [
+						"api",
+						"User"
+					]
+				},
+				"description": "Add a new user to the list/database."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5171/api/User/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"NewEmail\",\r\n  \"password\": \"user2Pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5171/api/User/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5171",
+					"path": [
+						"api",
+						"User",
+						"2"
+					]
+				},
+				"description": "Update a user in the list/database by id."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5171/api/User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5171/api/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5171",
+					"path": [
+						"api",
+						"User"
+					]
+				},
+				"description": "Get all users from list/database."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5171/api/User/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5171/api/User/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5171",
+					"path": [
+						"api",
+						"User",
+						"2"
+					]
+				},
+				"description": "Get user from list/database by id."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5171/api/User/5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5171/api/User/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5171",
+					"path": [
+						"api",
+						"User",
+						"5"
+					]
+				},
+				"description": "Delete user from list/database by id."
+			},
+			"response": []
+		}
+	]
+}
