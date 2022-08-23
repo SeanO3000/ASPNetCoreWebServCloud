@@ -41,7 +41,18 @@ namespace REST_ServiceProject
     public class UserRepository : IUserRepository
     {
         private static readonly List<User> _users = new List<User>();
-        private static int _userId = 1;
+        private static int _userId = 11;
+
+        public UserRepository()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                string testEmail = "user" + i.ToString() + "@testuser.com";
+                string testPassword = "userPass" + i.ToString();
+                User testUser = new(i, testEmail, testPassword);
+                _users.Add(testUser);
+            }
+        }
 
         /// <summary>
         /// Implement Property Users
@@ -78,6 +89,7 @@ namespace REST_ServiceProject
             if (user != null)
             {
                 user.Email = updatedUser.Email;
+                user.Password = updatedUser.Password;
 
                 return true;
             }

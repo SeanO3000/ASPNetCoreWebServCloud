@@ -10,6 +10,7 @@ namespace REST_ServiceProject.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+    [Authenticator]
     public class UserController : ControllerBase
     {
         private readonly IUserRepository userRepository; //user repository
