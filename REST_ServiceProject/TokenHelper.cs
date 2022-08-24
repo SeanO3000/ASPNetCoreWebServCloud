@@ -1,18 +1,9 @@
-﻿using System;
-using System.IO;
+﻿using Newtonsoft.Json;
 using System.Security.Cryptography;
 using System.Text;
-using Newtonsoft.Json;
-using REST_ServiceProject.Controllers;
 
 namespace REST_ServiceProject
 {
-    public class Token
-    {
-        public int Id { get; set; }
-        public DateTime Expires { get; set; }
-    }
-
     public static class TokenHelper
     {
         public static string GetToken(string email, string password)
@@ -22,7 +13,7 @@ namespace REST_ServiceProject
             // create the token
             var token = new Token
             {
-                Id = 5,
+                Id = 1,
                 Expires = DateTime.UtcNow.AddMinutes(10),
             };
             var jsonString = JsonConvert.SerializeObject(token);

@@ -22,9 +22,10 @@ namespace REST_ServiceProject.Controllers
 
         // This should require SSL
         [HttpGet]
-        public dynamic Get(string userName, string password)
+        [Route("{email}/{password}")]
+        public dynamic Get(string email, string password)
         {
-            var token = TokenHelper.GetToken(userName, password);
+            var token = TokenHelper.GetToken(email, password);
             return new { Token = token };
         }
     }
